@@ -49,7 +49,7 @@
         }
         
         .transformation-badge {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(45deg, #00b894, #00cec9);
             color: white;
             padding: 10px 30px;
             border-radius: 50px;
@@ -208,7 +208,7 @@
             display: flex;
             align-items: end;
             justify-content: space-around;
-            height: 300px;
+            height: 250px;
             background: linear-gradient(to top, #e3f2fd 0%, #bbdefb 100%);
             border-radius: 15px;
             padding: 20px;
@@ -219,11 +219,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 80px;
+            width: 120px;
         }
         
         .bar {
-            width: 60px;
+            width: 80px;
             background: linear-gradient(to top, #2c5aa0, #667eea);
             border-radius: 10px 10px 0 0;
             position: relative;
@@ -236,25 +236,27 @@
         
         .bar-value {
             position: absolute;
-            top: -30px;
+            top: -35px;
             left: 50%;
             transform: translateX(-50%);
             background: #2c5aa0;
             color: white;
-            padding: 5px 10px;
+            padding: 8px 12px;
             border-radius: 5px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
+            white-space: nowrap;
         }
         
         .bar-label {
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: bold;
             color: #333;
+            text-align: center;
         }
         
         .highlight {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(45deg, #00b894, #00cec9);
             color: white;
             padding: 3px 8px;
             border-radius: 5px;
@@ -311,33 +313,6 @@
             line-height: 1.6;
         }
         
-        .cta-section {
-            background: linear-gradient(45deg, #2c5aa0, #667eea);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .cta-button {
-            background: white;
-            color: #2c5aa0;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background: #f0f0f0;
-            transform: translateY(-2px);
-        }
-        
         .timeline {
             position: relative;
             margin: 30px 0;
@@ -376,6 +351,30 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bootstrap-note {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .lean-approach {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .hybrid-model {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
         
         @media (max-width: 768px) {
@@ -424,25 +423,25 @@
         <!-- Header Section -->
         <div class="header">
             <div class="logo">🏠 EzyHelpers</div>
-            <div class="tagline">Transforming India's Domestic Services Industry</div>
-            <div class="transformation-badge">Traditional → Uber-Model Transformation</div>
+            <div class="tagline">Practical Transformation to Uber Model</div>
+            <div class="transformation-badge">Bootstrapped • Bangalore-First • Sustainable Growth</div>
             
             <div class="key-metrics">
                 <div class="metric-card">
-                    <div class="metric-value">₹1 → ₹648</div>
-                    <div class="metric-label">Revenue Growth (Crores)</div>
+                    <div class="metric-value">₹1 → ₹5</div>
+                    <div class="metric-label">Year 1 Growth (Crores)</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">64x</div>
-                    <div class="metric-label">Revenue Multiplier</div>
+                    <div class="metric-value">400%</div>
+                    <div class="metric-label">Revenue Increase</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">₹25 Cr</div>
-                    <div class="metric-label">Investment Required</div>
+                    <div class="metric-value">1 City</div>
+                    <div class="metric-label">Bangalore Focus</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">100-250x</div>
-                    <div class="metric-label">Investor Returns</div>
+                    <div class="metric-value">Lean</div>
+                    <div class="metric-label">Bootstrapped Approach</div>
                 </div>
             </div>
         </div>
@@ -450,597 +449,635 @@
         <!-- Executive Summary Section -->
         <div class="section">
             <div class="section-header" onclick="toggleSection(this)">
-                📊 Executive Summary & Investment Thesis
+                📊 Strategic Business Plan Overview
             </div>
             <div class="section-content">
                 <div class="audience-tabs">
-                    <button class="tab active" onclick="showTab('exec-investors')">Investors</button>
-                    <button class="tab" onclick="showTab('exec-board')">Board/Stakeholders</button>
+                    <button class="tab active" onclick="showTab('exec-stakeholders')">Stakeholders</button>
+                    <button class="tab" onclick="showTab('exec-investors')">Potential Investors</button>
                     <button class="tab" onclick="showTab('exec-team')">Internal Team</button>
                 </div>
 
-                <div id="exec-investors" class="tab-content active">
-                    <h3>🎯 Investment Opportunity</h3>
+                <div id="exec-stakeholders" class="tab-content active">
+                    <h3>🎯 Practical Transformation Strategy</h3>
+                    
+                    <div class="bootstrap-note">
+                        <h4>💡 Bootstrapped Approach - Smart & Sustainable</h4>
+                        <p><strong>Our philosophy:</strong> Prove the model works in our home market before scaling</p>
+                        <ul>
+                            <li><strong>Year 1:</strong> Bangalore-only focus, hybrid model (traditional + uber)</li>
+                            <li><strong>Growth Target:</strong> ₹1 Cr → ₹5 Cr (realistic 400% growth)</li>
+                            <li><strong>Investment:</strong> Minimal external funding, reinvest profits</li>
+                            <li><strong>Risk:</strong> Low risk, high learning, sustainable approach</li>
+                        </ul>
+                    </div>
+
                     <div class="chart-container">
-                        <h4>Current State vs. Target Transformation</h4>
+                        <h4>Current State vs. Year 1 Practical Target</h4>
                         <table class="comparison-table">
                             <tr>
                                 <th>Metric</th>
                                 <th>Current State</th>
                                 <th>Year 1 Target</th>
-                                <th>Year 3 Target</th>
-                                <th>Transformation</th>
+                                <th>Strategy</th>
                             </tr>
                             <tr>
                                 <td><strong>Annual Revenue</strong></td>
                                 <td>₹1 Cr</td>
-                                <td>₹54 Cr</td>
-                                <td>₹648 Cr</td>
-                                <td><span class="highlight">64,700% Growth</span></td>
+                                <td>₹5 Cr</td>
+                                <td>Hybrid model: Traditional + Uber</td>
                             </tr>
                             <tr>
                                 <td><strong>Monthly Transactions</strong></td>
                                 <td>35 placements</td>
-                                <td>50,000</td>
-                                <td>400,000</td>
-                                <td><span class="highlight">1,143x Increase</span></td>
+                                <td>200 transactions</td>
+                                <td>Gradual shift to subscription model</td>
                             </tr>
                             <tr>
                                 <td><strong>Active Customers</strong></td>
                                 <td>250/month</td>
-                                <td>25,000</td>
-                                <td>200,000</td>
-                                <td><span class="highlight">800x Growth</span></td>
+                                <td>1,000/month</td>
+                                <td>Focus on retention & repeat usage</td>
                             </tr>
                             <tr>
-                                <td><strong>Geographic Presence</strong></td>
-                                <td>1 city (95% Bangalore)</td>
-                                <td>4 cities</td>
-                                <td>20 cities</td>
-                                <td><span class="highlight">20x Expansion</span></td>
+                                <td><strong>Provider Utilization</strong></td>
+                                <td>5% (250 of 5,000)</td>
+                                <td>15% (750 active)</td>
+                                <td>Better matching & flexible scheduling</td>
                             </tr>
                             <tr>
-                                <td><strong>Market Share</strong></td>
-                                <td><1%</td>
-                                <td>3%</td>
-                                <td>15%</td>
-                                <td><span class="highlight">Market Leader</span></td>
+                                <td><strong>Geographic Focus</strong></td>
+                                <td>Bangalore 95%</td>
+                                <td>Bangalore 100%</td>
+                                <td>Perfect home market first</td>
                             </tr>
                         </table>
                         
-                        <h4>Investment Returns Scenario</h4>
-                        <div style="background: #e8f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
-                            <p><strong>Conservative Exit (Year 3-4):</strong></p>
+                        <div class="lean-approach">
+                            <h4>🚀 Long-term Vision (Years 2-3)</h4>
                             <ul>
-                                <li>Strategic Sale Valuation: ₹2,000-3,000 crores</li>
-                                <li>Investor Returns: <span class="highlight">80-120x</span></li>
-                                <li>IRR: <span class="highlight">70-90%</span></li>
-                            </ul>
-                            <p><strong>Optimistic Exit (Year 4-5):</strong></p>
-                            <ul>
-                                <li>IPO Valuation: ₹5,000-8,000 crores</li>
-                                <li>Investor Returns: <span class="highlight">200-320x</span></li>
-                                <li>IRR: <span class="highlight">100-150%</span></li>
+                                <li><strong>Year 2:</strong> Expand to 2-3 nearby cities (Mysore, Mangalore)</li>
+                                <li><strong>Year 3:</strong> Scale to ₹15+ crores, 5-6 cities</li>
+                                <li><strong>Model Validation:</strong> Prove unit economics before major scaling</li>
+                                <li><strong>Investment Ready:</strong> Strong metrics for external funding if needed</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div id="exec-board" class="tab-content">
-                    <h3>🎯 Strategic Transformation Overview</h3>
+                <div id="exec-investors" class="tab-content">
+                    <h3>🎯 Investment Opportunity (Future Potential)</h3>
                     <div class="chart-container">
-                        <h4>Why Transform Now?</h4>
+                        <h4>Why This Approach De-risks Investment</h4>
                         <div class="success-factor">
-                            <strong>Market Opportunity:</strong> ₹2,00,000 crore domestic services market growing at 25-30% annually
+                            <strong>Proven Market:</strong> 5 years successful operations in Bangalore with 5,000+ providers
                         </div>
                         <div class="success-factor">
-                            <strong>Technology Readiness:</strong> 750M+ smartphone users, 500M+ UPI users enable platform adoption
+                            <strong>Conservative Growth:</strong> 400% Year 1 growth target is achievable and sustainable
                         </div>
                         <div class="success-factor">
-                            <strong>Competitive Gap:</strong> Urban Company focused on premium, leaving middle-class market underserved
+                            <strong>Hybrid Model:</strong> Maintains revenue while testing new model - minimal disruption risk
                         </div>
                         <div class="success-factor">
-                            <strong>Provider Network:</strong> 5,000+ verified providers ready for transformation with proper incentives
+                            <strong>Unit Economics:</strong> Focus on profitability from Day 1, not just growth
                         </div>
                         
-                        <h4>Current Business Limitations</h4>
-                        <div class="risk-item">
-                            <strong>Low Utilization:</strong> Only 250 of 5,000 providers active monthly (5% utilization)
+                        <h4>Future Funding Potential</h4>
+                        <div style="background: #e8f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                            <p><strong>After Year 1 Success (₹5 Cr revenue proven):</strong></p>
+                            <ul>
+                                <li>Series A Ready: Strong unit economics and proven model</li>
+                                <li>Market Validation: Demonstrated ability to transform traditional business</li>
+                                <li>Scaling Opportunity: Expand to 15+ cities with investor support</li>
+                                <li>Valuation Upside: Multiple expansion based on proven growth trajectory</li>
+                            </ul>
                         </div>
-                        <div class="risk-item">
-                            <strong>Poor Retention:</strong> 25% customer retention vs industry standard 65%+
-                        </div>
-                        <div class="risk-item">
-                            <strong>Geographic Concentration:</strong> 95% revenue from Bangalore limits growth
-                        </div>
-                        <div class="risk-item">
-                            <strong>High CAC:</strong> ₹400-600 customer acquisition cost vs target ₹180-220
+                        
+                        <div class="bootstrap-note">
+                            <h4>💎 Current Opportunity</h4>
+                            <p><strong>For forward-thinking investors:</strong> Small investment now in a proven, profitable business with massive upside potential once model is validated in home market.</p>
                         </div>
                     </div>
                 </div>
 
                 <div id="exec-team" class="tab-content">
-                    <h3>🎯 Internal Transformation Strategy</h3>
+                    <h3>🎯 Internal Execution Plan</h3>
                     <div class="chart-container">
-                        <h4>Team Scaling Plan</h4>
+                        <h4>Lean Team Approach</h4>
                         <table class="comparison-table">
                             <tr>
                                 <th>Department</th>
                                 <th>Current</th>
                                 <th>Month 6</th>
                                 <th>Month 12</th>
-                                <th>Month 18</th>
+                                <th>Focus</th>
                             </tr>
                             <tr>
                                 <td>Technology</td>
                                 <td>2</td>
-                                <td>15</td>
-                                <td>25</td>
-                                <td>40</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>Essential platform features only</td>
                             </tr>
                             <tr>
                                 <td>Operations</td>
                                 <td>8</td>
-                                <td>20</td>
-                                <td>35</td>
-                                <td>45</td>
+                                <td>10</td>
+                                <td>12</td>
+                                <td>Maintain quality during transition</td>
                             </tr>
                             <tr>
                                 <td>Marketing</td>
                                 <td>2</td>
-                                <td>8</td>
-                                <td>12</td>
-                                <td>15</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>Bangalore customer retention</td>
                             </tr>
                             <tr>
-                                <td>City Operations</td>
+                                <td>Provider Relations</td>
                                 <td>3</td>
-                                <td>15</td>
-                                <td>30</td>
-                                <td>40</td>
+                                <td>5</td>
+                                <td>7</td>
+                                <td>Smooth provider transition</td>
                             </tr>
                         </table>
                         
                         <h4>Key Success Factors for Team</h4>
                         <ul style="list-style: none; padding: 0;">
-                            <li>✅ Maintain quality standards during rapid scaling</li>
-                            <li>✅ Successful provider transition to platform model</li>
-                            <li>✅ Technology platform stability and performance</li>
-                            <li>✅ Multi-city operations standardization</li>
-                            <li>✅ Customer acquisition and retention optimization</li>
+                            <li>✅ Maintain current service quality while introducing new model</li>
+                            <li>✅ Gradual provider transition with proper training and support</li>
+                            <li>✅ Focus on customer retention and satisfaction</li>
+                            <li>✅ Build scalable processes for future expansion</li>
+                            <li>✅ Achieve profitability targets with lean operations</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Financial Projections Section -->
+        <!-- Financial Model Section -->
         <div class="section">
             <div class="section-header" onclick="toggleSection(this)">
-                💰 Financial Model & Projections
+                💰 Practical Financial Model
             </div>
             <div class="section-content">
                 <div class="audience-tabs">
-                    <button class="tab active" onclick="showTab('finance-investors')">Investor View</button>
-                    <button class="tab" onclick="showTab('finance-operations')">Operations View</button>
+                    <button class="tab active" onclick="showTab('finance-realistic')">Realistic Projections</button>
+                    <button class="tab" onclick="showTab('finance-hybrid')">Hybrid Model Details</button>
                     <button class="tab" onclick="showTab('finance-unit')">Unit Economics</button>
                 </div>
 
-                <div id="finance-investors" class="tab-content active">
-                    <h3>📈 Revenue Growth Trajectory</h3>
+                <div id="finance-realistic" class="tab-content active">
+                    <h3>📈 Conservative Growth Trajectory</h3>
                     <div class="growth-chart">
                         <div class="growth-bar">
-                            <div class="bar" style="height: 20px;">
+                            <div class="bar" style="height: 40px;">
                                 <div class="bar-value">₹1 Cr</div>
                             </div>
-                            <div class="bar-label">Current</div>
+                            <div class="bar-label">Current<br>(Baseline)</div>
                         </div>
                         <div class="growth-bar">
                             <div class="bar" style="height: 120px;">
-                                <div class="bar-value">₹54 Cr</div>
+                                <div class="bar-value">₹5 Cr</div>
                             </div>
-                            <div class="bar-label">Year 1</div>
+                            <div class="bar-label">Year 1<br>(Target)</div>
                         </div>
                         <div class="growth-bar">
                             <div class="bar" style="height: 180px;">
-                                <div class="bar-value">₹216 Cr</div>
+                                <div class="bar-value">₹15 Cr</div>
                             </div>
-                            <div class="bar-label">Year 2</div>
-                        </div>
-                        <div class="growth-bar">
-                            <div class="bar" style="height: 250px;">
-                                <div class="bar-value">₹648 Cr</div>
-                            </div>
-                            <div class="bar-label">Year 3</div>
+                            <div class="bar-label">Year 3<br>(Vision)</div>
                         </div>
                     </div>
                     
-                    <div class="chart-container">
-                        <h4>Business Model Transformation Impact</h4>
-                        <table class="comparison-table">
-                            <tr>
-                                <th>Revenue Stream</th>
-                                <th>Current Model</th>
-                                <th>New Uber Model</th>
-                                <th>Year 3 Revenue</th>
-                            </tr>
-                            <tr>
-                                <td>Placement Fees</td>
-                                <td>90% (₹90 L)</td>
-                                <td>Eliminated</td>
-                                <td>₹0</td>
-                            </tr>
-                            <tr>
-                                <td>Service Commissions</td>
-                                <td>0%</td>
-                                <td>70% (20% rate)</td>
-                                <td>₹453 Cr</td>
-                            </tr>
-                            <tr>
-                                <td>Platform Fees</td>
-                                <td>0%</td>
-                                <td>10%</td>
-                                <td>₹65 Cr</td>
-                            </tr>
-                            <tr>
-                                <td>Subscriptions</td>
-                                <td>5% (₹5 L)</td>
-                                <td>15%</td>
-                                <td>₹97 Cr</td>
-                            </tr>
-                            <tr>
-                                <td>Other Services</td>
-                                <td>5% (₹5 L)</td>
-                                <td>5%</td>
-                                <td>₹33 Cr</td>
-                            </tr>
-                        </table>
+                    <div class="bootstrap-note">
+                        <h4>💡 Why ₹5 Crore is Achievable in Year 1</h4>
+                        <ul>
+                            <li><strong>Existing Base:</strong> 5,000+ verified providers, proven operations</li>
+                            <li><strong>Market Demand:</strong> Bangalore market ready for on-demand services</li>
+                            <li><strong>Hybrid Approach:</strong> Keep traditional revenue while building new streams</li>
+                            <li><strong>Provider Efficiency:</strong> Increase utilization from 5% to 15%</li>
+                            <li><strong>Customer Retention:</strong> Improve retention from 25% to 50%</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div id="finance-operations" class="tab-content">
-                    <h3>📊 Operational Metrics</h3>
+                    
                     <div class="chart-container">
-                        <h4>Monthly Performance Targets</h4>
+                        <h4>Monthly Performance Milestones</h4>
                         <table class="comparison-table">
                             <tr>
                                 <th>Metric</th>
                                 <th>Current</th>
                                 <th>Month 6</th>
                                 <th>Month 12</th>
-                                <th>Month 18</th>
+                                <th>Growth</th>
+                            </tr>
+                            <tr>
+                                <td>Monthly Revenue</td>
+                                <td>₹8.3 L</td>
+                                <td>₹25 L</td>
+                                <td>₹42 L</td>
+                                <td><span class="highlight">5x Growth</span></td>
                             </tr>
                             <tr>
                                 <td>Monthly Transactions</td>
                                 <td>35</td>
-                                <td>8,000</td>
-                                <td>50,000</td>
-                                <td>150,000</td>
+                                <td>100</td>
+                                <td>200</td>
+                                <td><span class="highlight">6x Growth</span></td>
                             </tr>
                             <tr>
                                 <td>Active Customers</td>
                                 <td>250</td>
-                                <td>5,000</td>
-                                <td>25,000</td>
-                                <td>75,000</td>
+                                <td>600</td>
+                                <td>1,000</td>
+                                <td><span class="highlight">4x Growth</span></td>
                             </tr>
                             <tr>
                                 <td>Active Providers</td>
                                 <td>250</td>
-                                <td>800</td>
-                                <td>3,000</td>
-                                <td>8,000</td>
-                            </tr>
-                            <tr>
-                                <td>Monthly GMV</td>
-                                <td>₹6.3 L</td>
-                                <td>₹60 L</td>
-                                <td>₹3.75 Cr</td>
-                                <td>₹12 Cr</td>
-                            </tr>
-                            <tr>
-                                <td>Platform Revenue</td>
-                                <td>₹8.2 L</td>
-                                <td>₹18 L</td>
-                                <td>₹4.5 Cr</td>
-                                <td>₹18 Cr</td>
+                                <td>500</td>
+                                <td>750</td>
+                                <td><span class="highlight">3x Growth</span></td>
                             </tr>
                         </table>
                     </div>
                 </div>
 
-                <div id="finance-unit" class="tab-content">
-                    <h3>🔍 Unit Economics Analysis</h3>
+                <div id="finance-hybrid" class="tab-content">
+                    <h3>🔄 Hybrid Model Revenue Strategy</h3>
+                    
+                    <div class="hybrid-model">
+                        <h4>📊 Revenue Mix Evolution</h4>
+                        <p><strong>Smart Transition:</strong> Gradually shift from placement fees to recurring transaction model</p>
+                    </div>
+                    
                     <div class="chart-container">
-                        <h4>Customer Unit Economics</h4>
+                        <h4>Revenue Stream Transition (Year 1)</h4>
+                        <table class="comparison-table">
+                            <tr>
+                                <th>Revenue Stream</th>
+                                <th>Current</th>
+                                <th>Month 6</th>
+                                <th>Month 12</th>
+                                <th>Strategy</th>
+                            </tr>
+                            <tr>
+                                <td>Traditional Placement</td>
+                                <td>90% (₹90L)</td>
+                                <td>70% (₹175L)</td>
+                                <td>50% (₹250L)</td>
+                                <td>Gradual reduction</td>
+                            </tr>
+                            <tr>
+                                <td>On-Demand Bookings</td>
+                                <td>0%</td>
+                                <td>20% (₹50L)</td>
+                                <td>35% (₹175L)</td>
+                                <td>New revenue stream</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Subscriptions</td>
+                                <td>5% (₹5L)</td>
+                                <td>8% (₹20L)</td>
+                                <td>12% (₹60L)</td>
+                                <td>Recurring revenue</td>
+                            </tr>
+                            <tr>
+                                <td>Other Services</td>
+                                <td>5% (₹5L)</td>
+                                <td>2% (₹5L)</td>
+                                <td>3% (₹15L)</td>
+                                <td>Training, equipment</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total Monthly</strong></td>
+                                <td><strong>₹8.3L</strong></td>
+                                <td><strong>₹25L</strong></td>
+                                <td><strong>₹42L</strong></td>
+                                <td><strong>5x Growth</strong></td>
+                            </tr>
+                        </table>
+                        
+                        <div class="lean-approach">
+                            <h4>🎯 Hybrid Model Benefits</h4>
+                            <ul>
+                                <li><strong>Risk Reduction:</strong> Maintain existing revenue while building new</li>
+                                <li><strong>Customer Retention:</strong> Existing customers become recurring users</li>
+                                <li><strong>Provider Transition:</strong> Smooth transition with income stability</li>
+                                <li><strong>Market Testing:</strong> Validate demand before full commitment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="finance-unit" class="tab-content">
+                    <h3>🔍 Unit Economics Focus</h3>
+                    <div class="chart-container">
+                        <h4>Customer Economics Improvement</h4>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                             <div style="background: #f8f9fa; padding: 20px; border-radius: 10px;">
                                 <h5>Current Model</h5>
                                 <p><strong>CAC:</strong> ₹500</p>
-                                <p><strong>Average Transaction:</strong> ₹18,000</p>
-                                <p><strong>Customer Lifetime:</strong> 12 months</p>
+                                <p><strong>Transaction Value:</strong> ₹18,000</p>
+                                <p><strong>Frequency:</strong> One-time</p>
+                                <p><strong>Retention:</strong> 25%</p>
                                 <p><strong>LTV:</strong> ₹18,000</p>
                                 <p><strong>LTV/CAC:</strong> <span style="color: #dc3545;">36x</span></p>
                             </div>
-                            <div style="background: #e8f4f8; padding: 20px; border-radius: 10px;">
-                                <h5>Target Uber Model</h5>
-                                <p><strong>CAC:</strong> ₹200</p>
-                                <p><strong>Monthly Spend:</strong> ₹1,800</p>
-                                <p><strong>Customer Lifetime:</strong> 30 months</p>
-                                <p><strong>LTV:</strong> ₹13,500</p>
-                                <p><strong>LTV/CAC:</strong> <span style="color: #28a745;">67.5x</span></p>
+                            <div style="background: #d1ecf1; padding: 20px; border-radius: 10px;">
+                                <h5>Target Hybrid Model</h5>
+                                <p><strong>CAC:</strong> ₹300</p>
+                                <p><strong>Monthly Value:</strong> ₹800</p>
+                                <p><strong>Frequency:</strong> 3x/month</p>
+                                <p><strong>Retention:</strong> 50%</p>
+                                <p><strong>LTV:</strong> ₹14,400</p>
+                                <p><strong>LTV/CAC:</strong> <span style="color: #28a745;">48x</span></p>
                             </div>
                         </div>
                         
-                        <h4>Provider Economics Transformation</h4>
+                        <h4>Provider Economics (Bangalore Focus)</h4>
                         <table class="comparison-table">
                             <tr>
-                                <th>Provider Type</th>
-                                <th>Current Earnings</th>
-                                <th>Uber Model Earnings</th>
-                                <th>Improvement</th>
+                                <th>Provider Segment</th>
+                                <th>Current Utilization</th>
+                                <th>Target Utilization</th>
+                                <th>Income Improvement</th>
                             </tr>
                             <tr>
-                                <td>Part-time (20 hrs/week)</td>
-                                <td>₹12,000/month</td>
-                                <td>₹19,200/month</td>
-                                <td><span class="highlight">+60%</span></td>
-                            </tr>
-                            <tr>
-                                <td>Full-time (40 hrs/week)</td>
+                                <td>Full-time Providers</td>
                                 <td>₹18,000/month</td>
-                                <td>₹41,600/month</td>
-                                <td><span class="highlight">+131%</span></td>
+                                <td>₹25,000/month</td>
+                                <td><span class="highlight">+39%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Part-time Providers</td>
+                                <td>₹8,000/month</td>
+                                <td>₹15,000/month</td>
+                                <td><span class="highlight">+88%</span></td>
                             </tr>
                             <tr>
                                 <td>Specialized (Childcare)</td>
                                 <td>₹25,000/month</td>
-                                <td>₹55,000/month</td>
-                                <td><span class="highlight">+120%</span></td>
+                                <td>₹35,000/month</td>
+                                <td><span class="highlight">+40%</span></td>
                             </tr>
                         </table>
+                        
+                        <div class="bootstrap-note">
+                            <h4>📊 Path to ₹5 Crore Revenue</h4>
+                            <ul>
+                                <li><strong>Current Revenue:</strong> ₹1 Cr (35 placements/month × ₹18K × 12 months)</li>
+                                <li><strong>Target Revenue:</strong> ₹5 Cr through improved efficiency and new model</li>
+                                <li><strong>Key Driver:</strong> Increase provider utilization from 5% to 15%</li>
+                                <li><strong>Result:</strong> 3x more active providers generating recurring revenue</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Implementation Timeline Section -->
+        <!-- Implementation Strategy Section -->
         <div class="section">
             <div class="section-header" onclick="toggleSection(this)">
-                🚀 18-Month Implementation Roadmap
+                🚀 12-Month Bangalore Implementation Plan
             </div>
             <div class="section-content">
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h4>Phase 1: Foundation (Months 1-3)</h4>
-                            <p><strong>Focus:</strong> Technology development & team building</p>
+                            <h4>Months 1-2: Foundation Setup</h4>
+                            <p><strong>Focus:</strong> Basic technology platform + provider preparation</p>
                             <ul>
-                                <li>Hire 15-person technology team</li>
-                                <li>Develop mobile apps and platform</li>
-                                <li>Provider transition planning</li>
-                                <li>Legal framework setup</li>
+                                <li>Develop basic mobile app for customers and providers</li>
+                                <li>Set up payment gateway and basic matching system</li>
+                                <li>Begin provider education about hybrid model</li>
+                                <li>Hire 2 additional tech resources</li>
                             </ul>
-                            <p><strong>Investment:</strong> ₹12 crores</p>
+                            <p><strong>Investment:</strong> ₹15 lakhs</p>
+                            <p><strong>Target:</strong> App ready for pilot testing</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h4>Phase 2: Bangalore Pilot (Months 4-5)</h4>
-                            <p><strong>Focus:</strong> Beta launch with existing network</p>
+                            <h4>Months 3-4: Pilot Launch</h4>
+                            <p><strong>Focus:</strong> Limited beta with existing customers</p>
                             <ul>
-                                <li>Transition 200+ providers to platform</li>
-                                <li>Launch beta with 500 customers</li>
-                                <li>Test and optimize platform</li>
-                                <li>Achieve 1,000 monthly bookings</li>
+                                <li>Launch beta with 100 existing customers</li>
+                                <li>Onboard 200 providers to hybrid model</li>
+                                <li>Test platform with 50 on-demand bookings/month</li>
+                                <li>Maintain traditional placements alongside</li>
                             </ul>
-                            <p><strong>Target:</strong> ₹18 lakhs monthly revenue</p>
+                            <p><strong>Investment:</strong> ₹10 lakhs</p>
+                            <p><strong>Target:</strong> ₹12 lakhs monthly revenue</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h4>Phase 3: Multi-City Launch (Months 6-8)</h4>
-                            <p><strong>Focus:</strong> Delhi, Mumbai, Chennai expansion</p>
+                            <h4>Months 5-6: Platform Optimization</h4>
+                            <p><strong>Focus:</strong> Improve platform based on user feedback</p>
                             <ul>
-                                <li>Launch in 3 new cities</li>
-                                <li>Recruit 1,500+ new providers</li>
-                                <li>Achieve 25,000 customers</li>
-                                <li>Scale to 50,000 monthly bookings</li>
+                                <li>Scale to 300 customers using hybrid model</li>
+                                <li>Onboard additional 200 providers (400 total)</li>
+                                <li>Achieve 100+ on-demand bookings/month</li>
+                                <li>Optimize pricing and service categories</li>
                             </ul>
-                            <p><strong>Target:</strong> ₹4.5 crores monthly revenue</p>
+                            <p><strong>Investment:</strong> ₹8 lakhs</p>
+                            <p><strong>Target:</strong> ₹20 lakhs monthly revenue</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h4>Phase 4: Scale & Optimize (Months 9-12)</h4>
-                            <p><strong>Focus:</strong> Platform optimization & profitability</p>
+                            <h4>Months 7-9: Market Expansion</h4>
+                            <p><strong>Focus:</strong> Scale within Bangalore market</p>
                             <ul>
-                                <li>AI/ML algorithm deployment</li>
-                                <li>Advanced subscription services</li>
-                                <li>Corporate B2B expansion</li>
-                                <li>Break-even achievement</li>
+                                <li>Expand to 600+ active customers</li>
+                                <li>Scale provider network to 500+ active</li>
+                                <li>Achieve 150+ monthly on-demand transactions</li>
+                                <li>Launch subscription packages</li>
                             </ul>
-                            <p><strong>Target:</strong> ₹18 crores monthly revenue</p>
+                            <p><strong>Investment:</strong> ₹12 lakhs</p>
+                            <p><strong>Target:</strong> ₹30 lakhs monthly revenue</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h4>Phase 5: Series A Prep (Months 13-18)</h4>
-                            <p><strong>Focus:</strong> Growth acceleration & funding</p>
+                            <h4>Months 10-12: Profitability & Future Planning</h4>
+                            <p><strong>Focus:</strong> Achieve targets and plan expansion</p>
                             <ul>
-                                <li>Expand to 10+ cities</li>
-                                <li>Advanced AI features</li>
-                                <li>Strong profitability metrics</li>
-                                <li>Series A fundraising</li>
+                                <li>Reach 1,000+ active customers</li>
+                                <li>750+ active providers in network</li>
+                                <li>200+ monthly on-demand transactions</li>
+                                <li>Prepare expansion strategy for Year 2</li>
                             </ul>
-                            <p><strong>Target:</strong> ₹54 crores monthly revenue</p>
+                            <p><strong>Investment:</strong> ₹10 lakhs</p>
+                            <p><strong>Target:</strong> ₹42 lakhs monthly revenue (₹5 Cr annual)</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Investment Requirements Section -->
+        <!-- Investment & Resource Requirements -->
         <div class="section">
             <div class="section-header" onclick="toggleSection(this)">
-                💼 Investment Requirements & Fund Utilization
+                💼 Lean Investment Requirements
             </div>
             <div class="section-content">
+                <div class="bootstrap-note">
+                    <h4>🎯 Bootstrapped Approach - Total Investment: ₹55 Lakhs</h4>
+                    <p><strong>Philosophy:</strong> Minimal external funding, reinvest profits for growth</p>
+                </div>
+                
                 <div class="investment-breakdown">
                     <div class="investment-card">
-                        <div class="investment-amount">₹12 Cr</div>
-                        <div class="investment-category">Technology Development (48%)</div>
+                        <div class="investment-amount">₹25 L</div>
+                        <div class="investment-category">Technology Development (45%)</div>
                         <div class="investment-details">
                             <ul>
-                                <li>Mobile apps (Android/iOS): ₹4.5 Cr</li>
-                                <li>AI/ML algorithms: ₹3.2 Cr</li>
-                                <li>Infrastructure & security: ₹2.8 Cr</li>
-                                <li>Development team: ₹1.5 Cr</li>
+                                <li>Basic mobile apps: ₹15 L</li>
+                                <li>Additional tech resources: ₹10 L</li>
                             </ul>
+                            <p><strong>Focus:</strong> Essential features only, no premium bells & whistles</p>
                         </div>
                     </div>
                     
                     <div class="investment-card">
-                        <div class="investment-amount">₹8 Cr</div>
-                        <div class="investment-category">Market Expansion (32%)</div>
+                        <div class="investment-amount">₹20 L</div>
+                        <div class="investment-category">Operations & Marketing (36%)</div>
                         <div class="investment-details">
                             <ul>
-                                <li>Customer acquisition: ₹4.5 Cr</li>
-                                <li>Provider recruitment: ₹2.2 Cr</li>
-                                <li>City expansion: ₹1.3 Cr</li>
+                                <li>Provider training: ₹8 L</li>
+                                <li>Customer acquisition: ₹12 L</li>
                             </ul>
+                            <p><strong>Focus:</strong> Bangalore market only, word-of-mouth emphasis</p>
                         </div>
                     </div>
                     
                     <div class="investment-card">
-                        <div class="investment-amount">₹5 Cr</div>
-                        <div class="investment-category">Working Capital (20%)</div>
+                        <div class="investment-amount">₹10 L</div>
+                        <div class="investment-category">Working Capital (19%)</div>
                         <div class="investment-details">
                             <ul>
-                                <li>Operations scaling: ₹2.5 Cr</li>
-                                <li>Provider incentives: ₹1.5 Cr</li>
-                                <li>Contingency fund: ₹1 Cr</li>
+                                <li>Provider incentives: ₹6 L</li>
+                                <li>Contingency fund: ₹4 L</li>
                             </ul>
+                            <p><strong>Focus:</strong> Smooth provider transition support</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="chart-container">
-                    <h4>Expected Returns & Exit Strategy</h4>
+                    <h4>Return on Investment Projection</h4>
                     <table class="comparison-table">
                         <tr>
-                            <th>Exit Scenario</th>
+                            <th>Investment</th>
                             <th>Timeline</th>
-                            <th>Valuation</th>
-                            <th>Investor Returns</th>
-                            <th>IRR</th>
+                            <th>Revenue Impact</th>
+                            <th>ROI</th>
                         </tr>
                         <tr>
-                            <td>Strategic Sale (Conservative)</td>
-                            <td>Year 3-4</td>
-                            <td>₹2,000-3,000 Cr</td>
-                            <td>80-120x</td>
-                            <td>70-90%</td>
+                            <td>₹55 Lakhs Total</td>
+                            <td>12 months</td>
+                            <td>₹1 Cr → ₹5 Cr</td>
+                            <td>₹4 Cr additional revenue</td>
                         </tr>
                         <tr>
-                            <td>Strategic Sale (Optimistic)</td>
-                            <td>Year 3-4</td>
-                            <td>₹4,000-5,000 Cr</td>
-                            <td>160-200x</td>
-                            <td>100-130%</td>
+                            <td>Technology (₹25 L)</td>
+                            <td>6 months</td>
+                            <td>Enables platform model</td>
+                            <td>7x return</td>
                         </tr>
                         <tr>
-                            <td>IPO (Public Markets)</td>
-                            <td>Year 4-5</td>
-                            <td>₹8,000-12,000 Cr</td>
-                            <td>320-480x</td>
-                            <td>150-200%</td>
+                            <td>Operations (₹20 L)</td>
+                            <td>12 months</td>
+                            <td>Customer & provider growth</td>
+                            <td>20x return</td>
                         </tr>
                     </table>
+                    
+                    <div class="lean-approach">
+                        <h4>💡 Self-Funding Strategy</h4>
+                        <ul>
+                            <li><strong>Month 1-6:</strong> Use current cash flow + ₹30L investment</li>
+                            <li><strong>Month 7-12:</strong> Reinvest growing profits + ₹25L additional</li>
+                            <li><strong>Break-even:</strong> Month 8-10 based on hybrid model</li>
+                            <li><strong>Year 2 Planning:</strong> Strong cash flow enables expansion without external funding</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Risk Analysis Section -->
+        <!-- Risk Management Section -->
         <div class="section">
             <div class="section-header" onclick="toggleSection(this)">
                 ⚠️ Risk Assessment & Mitigation
             </div>
             <div class="section-content">
-                <h3>Key Risk Areas & Mitigation Strategies</h3>
+                <h3>Key Risk Areas & Practical Mitigation</h3>
                 
                 <div class="risk-item">
-                    <h4>🔴 High Risk: Provider Adoption Resistance</h4>
-                    <p><strong>Risk:</strong> 95% of providers resist transition to gig economy model</p>
-                    <p><strong>Mitigation:</strong></p>
+                    <h4>🔴 Primary Risk: Provider Resistance to New Model</h4>
+                    <p><strong>Risk:</strong> Current providers resist using technology platform</p>
+                    <p><strong>Likelihood:</strong> High (60% of providers may resist initially)</p>
+                    <p><strong>Mitigation Strategy:</strong></p>
                     <ul>
-                        <li>3-month income guarantee during transition</li>
-                        <li>Comprehensive technology training & smartphone provision</li>
-                        <li>₹2,000 joining bonus + performance incentives</li>
-                        <li>Gradual transition allowing part-time platform usage</li>
+                        <li>Hybrid approach - maintain traditional alongside new model</li>
+                        <li>Start with tech-savvy 20% of providers as champions</li>
+                        <li>Comprehensive training + smartphone support</li>
+                        <li>Income guarantee during transition period</li>
+                        <li>Success stories and peer influence</li>
                     </ul>
-                    <p><strong>Budget Allocated:</strong> ₹1.2 crores</p>
-                </div>
-                
-                <div class="risk-item">
-                    <h4>🟡 Medium Risk: Urban Company Competitive Response</h4>
-                    <p><strong>Risk:</strong> Aggressive pricing and provider poaching by market leader</p>
-                    <p><strong>Mitigation:</strong></p>
-                    <ul>
-                        <li>Focus on Tier-2/3 cities where UC is weak</li>
-                        <li>Quality differentiation through DWSSC certification</li>
-                        <li>Provider loyalty through superior support & benefits</li>
-                        <li>Cultural advantage with regional language support</li>
-                    </ul>
-                    <p><strong>Budget Allocated:</strong> ₹1 crore competitive defense fund</p>
+                    <p><strong>Budget:</strong> ₹8 lakhs for training and incentives</p>
                 </div>
                 
                 <div class="risk-item">
-                    <h4>🟢 Low Risk: Technology Platform Stability</h4>
-                    <p><strong>Risk:</strong> App crashes or security breaches during scaling</p>
-                    <p><strong>Mitigation:</strong></p>
+                    <h4>🟡 Secondary Risk: Customer Adoption Speed</h4>
+                    <p><strong>Risk:</strong> Existing customers slow to adopt new booking method</p>
+                    <p><strong>Likelihood:</strong> Medium (customers may prefer familiar process)</p>
+                    <p><strong>Mitigation Strategy:</strong></p>
                     <ul>
-                        <li>Cloud-native architecture with auto-scaling</li>
-                        <li>Comprehensive testing and security audits</li>
-                        <li>99.9% uptime SLA with disaster recovery</li>
-                        <li>Regular penetration testing and compliance</li>
+                        <li>Maintain traditional booking option</li>
+                        <li>Personal onboarding for existing customers</li>
+                        <li>App benefits demonstration and training</li>
+                        <li>Incentives for early platform adoption</li>
                     </ul>
-                    <p><strong>Budget Allocated:</strong> ₹80 lakhs security & infrastructure</p>
+                    <p><strong>Budget:</strong> ₹5 lakhs for customer support and incentives</p>
                 </div>
                 
-                <div style="background: #d4edda; border: 1px solid #c3e6cb; padding: 20px; border-radius: 10px; margin: 20px 0;">
-                    <h4>🛡️ Risk Management Budget: ₹4 Crores Total</h4>
+                <div class="risk-item">
+                    <h4>🟢 Low Risk: Technology Platform Issues</h4>
+                    <p><strong>Risk:</strong> App crashes or technical problems during rollout</p>
+                    <p><strong>Likelihood:</strong> Low (simple platform, gradual rollout)</p>
+                    <p><strong>Mitigation Strategy:</strong></p>
                     <ul>
-                        <li>Provider support & retention: ₹1.5 Cr</li>
-                        <li>Technology & security: ₹1.5 Cr</li>
-                        <li>Competitive response: ₹1 Cr</li>
+                        <li>Start with basic features, add complexity gradually</li>
+                        <li>Extensive testing with small user groups</li>
+                        <li>Backup traditional systems during transition</li>
+                        <li>Local tech support team</li>
+                    </ul>
+                    <p><strong>Budget:</strong> ₹3 lakhs for testing and support</p>
+                </div>
+                
+                <div class="lean-approach">
+                    <h4>🛡️ Overall Risk Management: ₹16 Lakhs Budget</h4>
+                    <p><strong>Low-Risk Strategy:</strong> Hybrid model ensures business continuity while testing new approaches</p>
+                    <ul>
+                        <li>Provider support: ₹8 L</li>
+                        <li>Customer transition: ₹5 L</li>
+                        <li>Technology contingency: ₹3 L</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="cta-section">
-            <h2>🚀 Ready to Transform India's Domestic Services Industry?</h2>
-            <p>Join us in building India's most trusted on-demand marketplace for domestic services</p>
-            <p><strong>₹25 Crores Investment • 100-250x Returns • Market Leadership Opportunity</strong></p>
-            
-            <button class="cta-button">📧 Contact for Investment</button>
-            <button class="cta-button">📊 Download Full Business Plan</button>
-            <button class="cta-button">🎯 Schedule Presentation</button>
-            
-            <div style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">
-                <p>EzyHelpers • India's Most Trusted Domestic Services Platform</p>
-                <p>Transforming 5,000+ providers • Serving 200,000+ families • 20+ cities by 2027</p>
             </div>
         </div>
     </div>
